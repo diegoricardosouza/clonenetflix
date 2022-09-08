@@ -29,7 +29,7 @@ const Home = ({
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
       <Head>
-        <title>Netflix Clone</title>
+        <title>Home - Netflix Clone</title>
         <link
           rel="shortcut icon"
           href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico"
