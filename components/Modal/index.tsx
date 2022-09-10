@@ -35,7 +35,8 @@ function Modal() {
 
       if (data?.videos) {
         const index = data.videos.results.findIndex(
-          (element: Element) => element.type === 'Trailer'
+          (element: Element) =>
+            element.type === 'Trailer' || element.type === 'Teaser'
         )
         setTrailer(data.videos?.results[index]?.key)
       }
@@ -75,7 +76,7 @@ function Modal() {
             muted={muted}
           />
 
-          <div className="absolute bottom-10 flex w-full items-center justify-between px-10">
+          <div className="absolute bottom-[-60px] flex w-full items-center justify-between px-4 md:px-10 md:bottom-10">
             <div className="flex space-x-2">
               <button className="flex items-center gap-x-2 rounded bg-white px-8 text-xl font-bold text-black transition hover:bg-[#e6e6e6]">
                 <FaPlay className="h-7 w-7 text-black" />
@@ -101,7 +102,7 @@ function Modal() {
           </div>
         </div>
 
-        <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 py-8">
+        <div className="flex space-x-16 rounded-b-md bg-[#181818] px-10 py-24 md:py-8">
           <div className="space-y-6 text-lg">
             <div className="flex items-center space-x-2 text-sm">
               <p className="font-semibold text-green-400">
@@ -116,7 +117,7 @@ function Modal() {
             </div>
 
             <div className="flex flex-col gap-x-10 gap-y-4 font-light md:flex-row">
-              <p className="w-5/6">{movie?.overview}</p>
+              <p className="w-full md:w-5/6">{movie?.overview}</p>
               <div className="flex flex-col space-y-3 text-sm">
                 <div>
                   <span className="text-[gray]">Gêneros:</span>{' '}
