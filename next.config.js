@@ -1,10 +1,14 @@
+/* eslint-disable no-undef */
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withTM = require('next-transpile-modules')([
+  '@stripe/firestore-stripe-payments'
+]) // pass the modules you would like to see transpiled
+
+module.exports = withTM({
   reactStrictMode: true,
   images: {
-    domains: ['image.tmdb.org', 'rb.gy']
+    domains: ['rb.gy', 'image.tmdb.org']
   }
-}
-
-// eslint-disable-next-line no-undef
-module.exports = nextConfig
+})
