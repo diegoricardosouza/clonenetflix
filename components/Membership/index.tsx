@@ -9,6 +9,8 @@ function Membership() {
   const subscription = useSubscription(user)
   const [isBillingLoading, setBillingLoading] = useState(false)
 
+  const subscriptionCurrentEnd = subscription?.current_period_end
+
   const manageSubscription = () => {
     if (subscription) {
       setBillingLoading(true)
@@ -26,11 +28,43 @@ function Membership() {
           onClick={manageSubscription}
         >
           {isBillingLoading ? (
-            <Loader color="dark:fill-[#e50914]" />
+            <Loader color="fill-[#e50914]" />
           ) : (
             'Cancelar Assinatura'
           )}
         </button>
+      </div>
+
+      <div className="col-span-3">
+        <div className="flex flex-col justify-between border-b border-white/10 py-4 md:flex-row">
+          <div>
+            <p className="font-medium">{user?.email}</p>
+            <p className="text-[gray]">Password: ********</p>
+          </div>
+          <div className="md:text-right">
+            <p className="membershipLink">Alterar email</p>
+            <p className="membershipLink">Alterar password</p>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-between pt-4 pb-4 md:flex-row md:pb-0">
+          <div>
+            <p>
+              {subscription?.cancel_at_period_end
+                ? 'Sua assinatura terminará em '
+                : 'Sua próxima data de cobrança é '}
+              {subscriptionCurrentEnd}
+            </p>
+          </div>
+          <div className="md:text-right">
+            <p className="membershipLink">Gerenciar informações de pagamento</p>
+            <p className="membershipLink">
+              Adicionar método de pagamento alternativo
+            </p>
+            <p className="membershipLink">Detalhes de faturamento</p>
+            <p className="membershipLink">Alterar dia de cobrança</p>
+          </div>
+        </div>
       </div>
     </div>
   )
