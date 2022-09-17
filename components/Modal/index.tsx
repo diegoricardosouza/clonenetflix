@@ -29,7 +29,7 @@ import { db } from '../../firebase'
 
 function Modal() {
   const [showModal, setShowModal] = useRecoilState(modalState)
-  const [movie] = useRecoilState(movieState)
+  const [movie, setMovie] = useRecoilState(movieState)
   const [trailer, setTrailer] = useState('')
   const [genres, setGenres] = useState<Genre[]>([])
   const [muted, setMuted] = useState(false)
@@ -127,6 +127,8 @@ function Modal() {
 
   const handleClose = () => {
     setShowModal(false)
+    setMovie(null)
+    toast.dismiss()
   }
 
   return (
