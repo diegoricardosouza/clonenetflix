@@ -15,7 +15,7 @@ function useList(uid: string | undefined) {
         setList(
           snapshot.docs.map((doc) => ({
             id: doc.id,
-            ...doc.data
+            ...doc.data()
           }))
         )
       }
