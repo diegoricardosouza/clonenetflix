@@ -24,7 +24,6 @@ import { FaPlay } from 'react-icons/fa'
 import { modalState, movieState } from '../../atoms/modalAtom'
 import { Element, Genre, Movie } from '../../typings'
 import useAuth from '../../hooks/useAuth'
-
 import { db } from '../../firebase'
 
 function Modal() {

@@ -43,8 +43,6 @@ const Home = ({
   const movie = useRecoilValue(movieState)
   const list = useList(user?.uid)
 
-  console.log(list)
-
   if (loading || subscription === null) return null
 
   if (!subscription) return <Plans products={products} />

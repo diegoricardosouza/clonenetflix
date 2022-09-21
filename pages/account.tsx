@@ -15,9 +15,6 @@ function Account({ products }: Props) {
   const { user, logout } = useAuth()
   const subscription = useSubscription(user)
 
-  console.log('Produto', products)
-  console.log('Subscription', subscription)
-
   return (
     <div>
       <Head>
@@ -48,7 +45,7 @@ function Account({ products }: Props) {
 
       <main className="mx-auto max-w-6xl px-5 pt-24 pb-12 transition-all md:px-10">
         <div className="flex flex-col gap-x-4 md:flex-row md:items-center">
-          <h1 className="text-3xl md:text-4xl">Account</h1>
+          <h1 className="text-3xl md:text-4xl">Conta</h1>
 
           <div className="-ml-0.5 flex items-center gap-x-1.5">
             <img
