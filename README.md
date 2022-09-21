@@ -1,27 +1,43 @@
-# Next.js + Tailwind CSS Example
+<h1 align="center">
+  Clone do Netflix
+</h1>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## 💻 Projeto
 
-## Deploy your own
+Um clone da netflix, com algumas funcionalidades, usando a API da [**TMDB**](https://www.themoviedb.org/) para exibir os filmes.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Dependências usadas no projeto:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+-  [NextJS](https://nextjs.org/)
+-  [Firebase](https://console.firebase.google.com)
+-  [Tailwindcss](https://tailwindcss.com/)
+-  [TypeScript](https://www.typescriptlang.org/)
+-  [React Hook Form](https://react-hook-form.com/)
+-  [React Hot Toast](https://react-hot-toast.com/)
+-  [React Icons](https://react-icons.github.io/react-icons/)
+-  [React Player](https://www.npmjs.com/package/react-player)
+-  [Heroicons](https://heroicons.com/)
+-  [Material UI](https://mui.com/pt/)
+-  [Stripe](https://stripe.com/br)
+-  [Recoil JS](https://recoiljs.org/)
 
-## How to use
+Também foi adicionado a ferramenta [**ESLint**](https://eslint.org/) e [**Prettier**](https://prettier.io/) para aumentar a produtividade e auxiliar a manter um padrão de código.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+## 📥 Instalação e execução
+
+Faça um clone desse repositório e acesse o diretório.
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+# Instalando as dependências
+$ yarn
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+# Executanto aplicação
+$ yarn dev
 ```
+Abra [http://localhost:3000](http://localhost:3000) em seu browser para ver o resultado.
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+## Comandos
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- `dev`: roda sua aplicação em `localhost:3000`
+- `build`: cria a versão de build de produção
+- `lint`: roda os linter em todos os componentes e páginas
